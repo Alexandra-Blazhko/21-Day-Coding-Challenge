@@ -69,3 +69,15 @@ function initialize() {
   navigation.y = 0;
   navigation.z = 0; 
 }
+
+function calibrateX() {
+  let signal = 0;
+  for (let i = 0; i < 12; i++) {
+    signal = checkSignal();
+    if (signal !== undefined) {
+      navigation.x = signal;
+      break;
+    }
+  }
+}
+calibrateX();
