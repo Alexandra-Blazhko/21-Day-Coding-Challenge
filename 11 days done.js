@@ -36,7 +36,7 @@ function loadModule(index) {
 }
 
 function findModuleIndex(name){
-  for (let i=0; i < availableModules.length; i++){
+  for (let i = 0; i < availableModules.length; i++){
     if (availableModules[i].name === name){
       return i;
     }
@@ -60,4 +60,12 @@ activateBeacon()
 
 function setFrequency() {
   radio.frequency = (radio.range.low + radio.range.high) / 2
+}
+
+//  Navigation
+
+function initialize() {
+  navigation.x = 0;
+  navigation.y = 0;
+  navigation.z = 0; 
 }
