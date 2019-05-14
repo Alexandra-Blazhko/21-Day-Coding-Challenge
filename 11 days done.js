@@ -80,4 +80,28 @@ function calibrateX() {
     }
   }
 }
-calibrateX();
+// calibrateX();
+
+function calibrateY() {
+  let signal = 0;
+  for (let i = 0; i < 60; i++) {
+    signal = checkSignal();
+    if (signal !== undefined) {
+      navigation.y = signal;
+      break;
+    }
+  }
+}
+// calibrateY();
+
+function calibrateZ() {
+  let signal = 0;
+  for (let i = 0; i < 60; i++) {
+    signal = checkSignal();
+    if (signal !== undefined) {
+      navigation.z = signal;
+      break;
+    }
+  }
+}
+//calibrateZ();
