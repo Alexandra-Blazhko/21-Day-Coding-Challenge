@@ -105,3 +105,9 @@ function calibrateZ() {
   }
 }
 //calibrateZ();
+
+function calibrate() {
+  calibrateX();
+  calibrateY();
+  calibrateZ();
+}
