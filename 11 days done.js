@@ -111,3 +111,15 @@ function calibrate() {
   calibrateY();
   calibrateZ();
 }
+
+function setSpeed(speed) {
+  let i = parseInt(speed);
+  if (i >= 0) {
+    navigation.speed = i
+  }
+}
+
+function activateAntenna() {
+  ship.antenna.active = true;
+}
+activateAntenna()
