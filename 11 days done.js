@@ -122,11 +122,18 @@ function setSpeed(speed) {
 function activateAntenna() {
   ship.antenna.active = true;
 }
-activateAntenna()
+// activateAntenna()
 
 function sendBroadcast() {
   for (let i = 0; i < 100; i++) {
     broadcast();
   }
 }
-sendBroadcast()
+// sendBroadcast()
+
+function configureBroadcast() {
+  setFrequency();
+  activateAntenna();
+  sendBroadcast();
+}
+configureBroadcast()
